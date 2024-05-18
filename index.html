@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI PORTAFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Mi Portafolio</h1>
+        <div class="caja">
+            <h1><img src="imagenes/logosyn.jpg"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="experiencia.html">Experiencia</a></li>
+                    <li><a href="contactanos.html">Contactanos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hobbies-conocimientos">
+        <h2>Hobbies y Conocimientos</h2>
+        <div class="imagenes">
+            <img src="hobby1.jpg" alt="Hobby 1">
+            <img src="hobby2.jpg" alt="Hobby 2">
+            <img src="conocimiento1.jpg" alt="Conocimiento 1">
+            <img src="conocimiento2.jpg" alt="Conocimiento 2">
+        </div>
+    </section>
+
+    <section id="formacion-laboral">
+        <h2>Formación Laboral</h2>
+        <button onclick="mostrarExperiencia()">Experiencia Profesional</button>
+        <div id="experiencia-profesional" class="oculto">
+            <input type="password" id="codigo-secreto" placeholder="Ingrese el código secreto">
+            <button onclick="verificarCodigo()">Entrar</button>
+            <div id="contenido-experiencia" class="oculto">
+                <h3>Experiencia Profesional</h3>
+                <p>Contenido de la experiencia profesional aquí...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto" onsubmit="return enviarFormulario()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
